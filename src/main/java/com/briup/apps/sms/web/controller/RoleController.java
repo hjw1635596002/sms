@@ -1,10 +1,6 @@
-package com.briup.apps.sms.bean;
-/***
- * 角色信息
- * @author Administrator
- *
- */
-public class Role {
+package com.briup.apps.sms.web.controller;
+
+public class RoleController {
 	private Long id;
 	private String name;
 	public Long getId() {
@@ -19,6 +15,4 @@ public class Role {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-
 }

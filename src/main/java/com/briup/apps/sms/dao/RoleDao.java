@@ -1,12 +1,9 @@
-package com.briup.apps.sms.bean;
+package com.briup.apps.sms.dao;
 /***
+ * 
  * 角色信息
- * @author Administrator
- *
  */
-public class Role {
-	private Long id;
-	private String name;
+public class RoleDao {
 	public Long getId() {
 		return id;
 	}
@@ -19,6 +16,7 @@ public class Role {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+	private Long id;
+	private String name;
 
 }
