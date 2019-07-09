@@ -1,6 +1,6 @@
 package com.briup.apps.sms.web.controller;
 /**
- * 创建名为CourseController的新类
+ * 创建名为CourseController的类
  * @author LENOVO
  *
  */
