@@ -1,11 +1,6 @@
-package com.briup.apps.sms.web.controller;
+package com.briup.apps.sms.dao;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-@RestController
-@RequestMapping("/user")
-public class UserController {
+public class UserDao {
 	private Long id;
 	private String realname;
 	private String telphone;
@@ -55,5 +50,6 @@ public class UserController {
 	}
 	public void setClazz_id(Long clazz_id) {
 		this.clazz_id = clazz_id;
-	}
+	}	
 }
+

@@ -1,9 +1,10 @@
-package com.briup.apps.sms.dao;
+package com.briup.apps.sms.bean;
 
-public class SchoolDao {
+public class School {
 	private Long id;
 	private String name;
 	private String description;
+	private String address;
 	public Long getId() {
 		return id;
 	}
@@ -28,5 +29,5 @@ public class SchoolDao {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	private String address;
+	
 }

@@ -1,6 +1,6 @@
-package com.briup.apps.sms.dao;
+package com.briup.apps.sms.service;
 
-public class Clazz {
+public class ClazzService {
 	private Long id;
 	private String name;
 	public Long getId() {

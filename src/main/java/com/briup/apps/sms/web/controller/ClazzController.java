@@ -1,6 +1,6 @@
-package com.briup.apps.sms.service;
+package com.briup.apps.sms.web.controller;
 
-public class Clazz {
+public class ClazzController {
 	private Long id;
 	private String name;
 	public Long getId() {
@@ -22,5 +22,4 @@ public class Clazz {
 		this.begin_time = begin_time;
 	}
 	private Long begin_time;
-
 }
