@@ -5,5 +5,13 @@ package com.briup.apps.sms.web.controller;
  *
  */
 public class LiangyhController {
+	private int a=32;
 
+	public int getA() {
+		return a;
+	}
+
+	public void setA(int a) {
+		this.a = a;
+	}
 }
