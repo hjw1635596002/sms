@@ -1,9 +1,12 @@
 package com.briup.apps.sms.web.controller;
-/*
- * 罗云修改的类*/
 
+/**
+ * 
+ * @author LENOVO
+ *
+ */
 public class LuoyController {
-	public class Course {
+	
 	    private Long id;
 	    private String name;
 	    private String credit;
@@ -33,5 +36,5 @@ public class LuoyController {
 			this.user_id = user_id;
 		} 
 		
-}
+
 }
