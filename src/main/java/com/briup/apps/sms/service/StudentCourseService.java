@@ -1,10 +1,10 @@
-package com.briup.apps.sms.bean;
+package com.briup.apps.sms.service;
 /**
  * 学生与课程关系
  * @author Administrator
  *
  */
-public class StudentCourse {
+public class StudentCourseService {
  private Long id;
  private Long user_id;
  private Long course_id;
@@ -40,5 +40,4 @@ public int getGrade() {
 public void setGrade(int grade) {
 	this.grade = grade;
 }
- 
 }
