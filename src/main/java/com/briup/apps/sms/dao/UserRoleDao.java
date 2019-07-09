@@ -1,13 +1,13 @@
-package com.briup.apps.sms.bean;
+package com.briup.apps.sms.dao;
 /**
- * 角色与用户关系
+ * 角色与用户
  * @author lenovo
  *
  */
-public class UserRole {
-	private  long id;
-	private  long user_id;
-	private  long role_id;
+public class UserRoleDao {
+    private  long id;
+    private  long user_id;
+    private  long role_id;
 	public long getId() {
 		return id;
 	}
@@ -26,5 +26,4 @@ public class UserRole {
 	public void setRole_id(long role_id) {
 		this.role_id = role_id;
 	}
-
 }
