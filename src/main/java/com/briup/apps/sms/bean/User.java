@@ -1,6 +1,6 @@
 package com.briup.apps.sms.bean;
 /**
- * 校园信息
+ * 用户信息
  * @author Administrator
  *
  */
