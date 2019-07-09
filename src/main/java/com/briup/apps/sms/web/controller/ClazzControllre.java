@@ -1,4 +1,4 @@
 package com.briup.apps.sms.web.controller;
 
-public class Clazz {
+public class ClazzControllre {
 }
