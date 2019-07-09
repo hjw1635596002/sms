@@ -1,6 +1,6 @@
 package com.briup.apps.sms.dao;
 /**
- * 用户与角色关系
+ * 用户与角色关系   
  * @author lenovo
  *
  */
