@@ -1,26 +1,25 @@
 package com.briup.apps.sms.web.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.briup.apps.sms.bean.UserRole;
+import com.briup.apps.sms.service.UserRoleService;
+
+
+@RestController
+@RequestMapping("/userrole")
 public class UserRoleController {
-   private  long  id;
-   private  long  user_id;
-   private  long  role_id;
-public long getId() {
-	return id;
-}
-public void setId(long id) {
-	this.id = id;
-}
-public long getUser_id() {
-	return user_id;
-}
-public void setUser_id(long user_id) {
-	this.user_id = user_id;
-}
-public long getRole_id() {
-	return role_id;
-}
-public void setRole_id(long role_id) {
-	this.role_id = role_id;
-}
+   @Autowired
+   private UserRoleService userroleService; 
+// http://localhost:8080/school/selectAll
+   @GetMapping("selectAll")
+   public List<UserRole> selectAll(){
+	   return userroleService.selectAll();
+   }
    
 }
