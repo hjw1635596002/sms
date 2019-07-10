@@ -16,7 +16,7 @@ import com.briup.apps.sms.service.UserRoleService;
 public class UserRoleController {
    @Autowired
    private UserRoleService userroleService; 
-// http://localhost:8080/school/selectAll
+// http://localhost:8080/userrole/selectAll
    @GetMapping("selectAll")
    public List<UserRole> selectAll(){
 	   return userroleService.selectAll();
