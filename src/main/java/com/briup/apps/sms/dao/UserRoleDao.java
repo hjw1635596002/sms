@@ -7,6 +7,9 @@ import com.briup.apps.sms.bean.UserRole;
 public interface  UserRoleDao {
 	//查询所有
     List<UserRole> selectAll();
-    void insert(UserRole userrole);// 插入
-    void update(UserRole userrole);// 更新
+    // 插入
+    void insert(UserRole userrole);
+    // 更新
+    void update(UserRole userrole);
+    
 }

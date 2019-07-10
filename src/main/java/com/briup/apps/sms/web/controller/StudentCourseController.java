@@ -1,43 +1,30 @@
 package com.briup.apps.sms.web.controller;
-/**
- * 学生与课程关系
- * @author Administrator
- *
- */
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.briup.apps.sms.bean.StudentCourse;
+import com.briup.apps.sms.service.StudentCourseService;
+
+@RestController
+@RequestMapping("/studentcourse")
 public class StudentCourseController {
-	private Long id;
-	 private Long user_id;
-	 private Long course_id;
-	 private Long xk_time;
-	 private int grade;
-	public Long getId() {
-		return id;
+	
+	@Autowired
+	private StudentCourseService studentCourseService;
+
+	// http://localhost:8080/studentcourse/selectAll
+	@GetMapping("selectAll")
+	public List<StudentCourse> selectAll(){
+		return studentCourseService.selectAll();
 	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public Long getUser_id() {
-		return user_id;
-	}
-	public void setUser_id(Long user_id) {
-		this.user_id = user_id;
-	}
-	public Long getCourse_id() {
-		return course_id;
-	}
-	public void setCourse_id(Long course_id) {
-		this.course_id = course_id;
-	}
-	public Long getXk_time() {
-		return xk_time;
-	}
-	public void setXk_time(Long xk_time) {
-		this.xk_time = xk_time;
-	}
-	public int getGrade() {
-		return grade;
-	}
-	public void setGrade(int grade) {
-		this.grade = grade;
-	}
+	
+	
+	
+	
+	
 }

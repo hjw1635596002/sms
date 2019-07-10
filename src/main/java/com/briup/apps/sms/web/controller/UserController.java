@@ -1,59 +1,28 @@
 package com.briup.apps.sms.web.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.briup.apps.sms.bean.User;
+import com.briup.apps.sms.service.UserService;
+
 @RestController
 @RequestMapping("/user")
+
 public class UserController {
-	private Long id;
-	private String realname;
-	private String telphone;
-	private String password;
-	private String student_no;
-	private String gender;
-	private Long clazz_id;
 	
-	public Long getId() {
-		return id;
+	@Autowired
+	private UserService userService;
+
+	// http://localhost:8080/user/selectAll
+	@GetMapping("selectAll")
+	public List<User> selectAll(){
+		
+		return userService.selectAll();
+		
 	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getRealname() {
-		return realname;
-	}
-	public void setRealname(String realname) {
-		this.realname = realname;
-	}
-	public String getTelphone() {
-		return telphone;
-	}
-	public void setTelphone(String telphone) {
-		this.telphone = telphone;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public String getStudent_no() {
-		return student_no;
-	}
-	public void setStudent_no(String student_no) {
-		this.student_no = student_no;
-	}
-	public String getGender() {
-		return gender;
-	}
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-	public Long getClazz_id() {
-		return clazz_id;
-	}
-	public void setClazz_id(Long clazz_id) {
-		this.clazz_id = clazz_id;
-	}
+	
 }

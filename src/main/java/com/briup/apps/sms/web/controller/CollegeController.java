@@ -1,33 +1,26 @@
 package com.briup.apps.sms.web.controller;
 
-public class CollegeController {
-	private Long id;
-	private String name;
-	private String description;
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	public int getSchool_id() {
-		return school_id;
-	}
-	public void setSchool_id(int school_id) {
-		this.school_id = school_id;
-	}
-	private int school_id;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.briup.apps.sms.bean.College;
+import com.briup.apps.sms.service.CollegeService;
+
+@RestController
+@RequestMapping("/college")
+public class CollegeController {
+	
+	@Autowired
+	private CollegeService collegeService;
+
+	// http://localhost:8080/college/selectAll
+	@GetMapping("selectAll")
+	public List<College> selectAll(){
+		return collegeService.selectAll();
+	}
 }
+
