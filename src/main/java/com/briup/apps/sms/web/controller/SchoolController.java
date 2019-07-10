@@ -1,32 +1,30 @@
 package com.briup.apps.sms.web.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.briup.apps.sms.bean.School;
+import com.briup.apps.sms.service.SchoolService;
+
+@RestController
+@RequestMapping("/school")
 public class SchoolController {
-	private Long id;
-	private String name;
-	public Long getId() {
-		return id;
+	
+	@Autowired
+	private SchoolService schoolService;
+
+	// http://localhost:8080/school/selectAll
+	@GetMapping("selectAll")
+	public List<School> selectAll(){
+		return schoolService.selectAll();
 	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	private String description;
-	private String address;
+	
+	
+	
+	
+	
 }

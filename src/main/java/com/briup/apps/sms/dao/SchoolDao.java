@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.briup.apps.sms.bean.School;
 
-public interface ShootDao {
+public interface SchoolDao {
 	//查询所有
 	List<School> selectAll();
 	
