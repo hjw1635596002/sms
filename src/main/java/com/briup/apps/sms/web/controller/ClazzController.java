@@ -1,25 +1,26 @@
 package com.briup.apps.sms.web.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.briup.apps.sms.bean.Clazz;
+import com.briup.apps.sms.service.ClazzService;
+
+
+@RestController
+@RequestMapping("/clazz")
 public class ClazzController {
-	private Long id;
-	private String name;
-	public Long getId() {
-		return id;
+	
+	@Autowired
+	private ClazzService clazzService;
+
+	// http://localhost:8080/clazz/selectAll
+	@GetMapping("selectAll")
+	public List<Clazz> selectAll(){
+		return clazzService.selectAll();
 	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Long getBegin_time() {
-		return begin_time;
-	}
-	public void setBegin_time(Long begin_time) {
-		this.begin_time = begin_time;
-	}
-	private Long begin_time;
 }
