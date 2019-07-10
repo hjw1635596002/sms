@@ -11,6 +11,7 @@ import com.briup.apps.sms.service.UserService;
 
 @RestController
 @RequestMapping("/user")
+
 public class UserController {
 	
 	@Autowired
@@ -19,6 +20,7 @@ public class UserController {
 	// http://localhost:8080/user/selectAll
 	@GetMapping("selectAll")
 	public List<User> selectAll(){
+		
 		return userService.selectAll();
 		
 	}
