@@ -11,13 +11,13 @@ import com.briup.apps.sms.bean.StudentCourse;
 import com.briup.apps.sms.service.StudentCourseService;
 
 @RestController
-@RequestMapping("/studentCourse")
+@RequestMapping("/studentcourse")
 public class StudentCourseController {
 	
 	@Autowired
 	private StudentCourseService studentCourseService;
 
-	// http://localhost:8080/studentCourse/selectAll
+	// http://localhost:8080/studentcourse/selectAll
 	@GetMapping("selectAll")
 	public List<StudentCourse> selectAll(){
 		return studentCourseService.selectAll();
