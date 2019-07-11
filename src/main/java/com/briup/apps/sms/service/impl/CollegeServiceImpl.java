@@ -16,7 +16,7 @@ import com.briup.apps.sms.service.CollegeService;
  * */
 @Service
 public class CollegeServiceImpl implements CollegeService {
-	// 依赖注入，实例化SchoolDao并且赋值给schoolDao这个变量
+	// 依赖注入，实例化CollegeDao并且赋值给CollegeDao这个变量
 	@Resource
 	private CollegeDao collegeDao;
 
@@ -35,8 +35,9 @@ public class CollegeServiceImpl implements CollegeService {
 			collegeDao.update(college);
 		}
 	}
-
-	
-	
+	@Override
+	public void deleteById(long id) {
+		collegeDao.deleteById(id);
+	}
 
 }
