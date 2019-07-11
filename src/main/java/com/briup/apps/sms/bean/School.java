@@ -4,7 +4,14 @@ public class School {
 	private Long id;
 	private String name;
 	private String description;
+	private String tel;
 	private String address;
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
 	public Long getId() {
 		return id;
 	}
