@@ -35,4 +35,8 @@ public class RoleServiceImpl implements RoleService {
 		
 	}
 
+	@Override
+	public void deleteById(long id)throws Exception{
+		roleDao.deleteById(id);
+	}
 }
