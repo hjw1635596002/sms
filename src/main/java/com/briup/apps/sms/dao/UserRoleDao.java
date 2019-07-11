@@ -11,5 +11,7 @@ public interface  UserRoleDao {
     void insert(UserRole userrole);
     // 更新
     void update(UserRole userrole);
+   //  删除
+    void deleteById(long id);
     
 }

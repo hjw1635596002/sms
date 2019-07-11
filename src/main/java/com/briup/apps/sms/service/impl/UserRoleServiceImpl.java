@@ -25,6 +25,10 @@ public class UserRoleServiceImpl implements UserRoleService{
 	   else {
 		   userroleDao.update(userrole);
 	   }
-   	}
+ }
+   @Override
+   public void deleteById(long id) throws Exception{
+	   userroleDao.deleteById(id);
+     }
   }
 
