@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.briup.apps.sms.bean.School;
+import com.briup.apps.sms.bean.SchoolMessage;
 import com.briup.apps.sms.dao.SchoolDao;
 import com.briup.apps.sms.service.SchoolService;
 
@@ -38,6 +39,12 @@ public class SchoolServiceImpl implements SchoolService {
 	@Override
 	public void deleteById(long id) throws Exception {
 		schoolDao.deleteById(id);
+	}
+
+	@Override
+	public List<SchoolMessage> selectMessage() {
+		// TODO Auto-generated method stub
+		return schoolDao.selectMessage();
 	}
 
 }

@@ -6,6 +6,11 @@
   <select id="selectAll" resultType="com.briup.apps.sms.bean.School">
     select * from sms_school 
   </select>
+  
+  <select id="selectMessage" resultType="com.briup.apps.sms.bean.SchoolMessage">
+    select name,tel,address from sms_school 
+  </select>
+ 
   <insert id="insert">
   	insert into sms_school values(null,#{name},#{description},#{tel},#{address});
   </insert>

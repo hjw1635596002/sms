@@ -1,5 +1,10 @@
 package com.briup.apps.sms.bean;
 
+/**
+ * School的所有属性：id，name，description,tel,address
+ * @author hjw
+ *
+ */
 public class School {
 	private Long id;
 	private String name;
