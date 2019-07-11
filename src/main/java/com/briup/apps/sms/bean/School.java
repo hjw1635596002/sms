@@ -8,7 +8,7 @@ package com.briup.apps.sms.bean;
 public class School {
 	private Long id;
 	private String name;
-	private String description; 
+	private String description;  
 	private String tel;
 	private String address;
 	public String getTel() {
