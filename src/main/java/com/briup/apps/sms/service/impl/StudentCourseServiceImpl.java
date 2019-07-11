@@ -11,13 +11,14 @@ import com.briup.apps.sms.dao.StudentCourseDao;
 import com.briup.apps.sms.service.StudentCourseService;
 
 /**
- * 校园逻辑逻辑处理的实现类
+ * 学生与课程业务逻辑处理的实现类
  * */
 @Service
 public class StudentCourseServiceImpl implements StudentCourseService {
 	
 	@Resource
 	private StudentCourseDao studentCourseDao;
+	
 	@Override
 	public List<StudentCourse> selectAll() {
 		// TODO Auto-generated method stub
@@ -31,6 +32,13 @@ public class StudentCourseServiceImpl implements StudentCourseService {
 		} else {
 			studentCourseDao.update(studentcourse);
 		}
+		
+	}
+	
+
+	@Override
+	public void deleteById(long id) throws Exception {
+		studentCourseDao.deleteById(id);
 		
 	}
 		
