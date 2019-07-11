@@ -1,4 +1,7 @@
 package com.briup.apps.sms.bean;
+
+import java.math.BigInteger;
+
 /**
  * 用户信息
  * @author Administrator
@@ -9,10 +12,16 @@ public class User {
 	private String realname;
 	private String telphone;
 	private String password;
-	private String student_no;
+	private BigInteger student_no;
+	
 	private String gender;
 	private Long clazz_id;
-	
+	public BigInteger getStudent_no() {
+		return student_no;
+	}
+	public void setStudent_no(BigInteger student_no) {
+		this.student_no = student_no;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -37,12 +46,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getStudent_no() {
-		return student_no;
-	}
-	public void setStudent_no(String student_no) {
-		this.student_no = student_no;
-	}
+
 	public String getGender() {
 		return gender;
 	}

@@ -14,4 +14,7 @@ public interface UserDao {
 	//修改
 	void update(User user);
 	
+	//通过ID删除
+	void deleteById(long id);
+	
 }

@@ -12,11 +12,11 @@ import com.briup.apps.sms.service.UserService;
 /**
  * 角色逻辑逻辑处理的实现类
  * */
-@Service
 
+@Service
 public class UserServiceImpl implements UserService {
 	
-	// 依赖注入，实例化SchoolDao并且赋值给schoolDao这个变量
+	// 依赖注入，实例化UserDao并且赋值给userDao这个变量
 	@Resource
 	private UserDao userDao;
 
@@ -34,6 +34,13 @@ public class UserServiceImpl implements UserService {
 		} else {
 			userDao.update(user);
 		}
+		
+	}
+
+	@Override
+	public void deleteById(long id) throws Exception {
+		// TODO Auto-generated method stub
+		userDao.deleteById(id);
 		
 	}
 	
