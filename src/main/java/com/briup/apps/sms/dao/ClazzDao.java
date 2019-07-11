@@ -15,4 +15,10 @@ public interface ClazzDao {
 	//修改
 	void update(Clazz clazz);
 	
+	//通过ID删除
+	void deleteById(long id);
+
+
+
+	
 }
