@@ -11,4 +11,6 @@ void insert(Course course);
     //插入
 void update(Course course);
     //更新
+void deleteById(long id);
+    //通过Id删除
 }
